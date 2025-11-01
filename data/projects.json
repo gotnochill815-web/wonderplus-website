@@ -1,0 +1,58 @@
+[
+  {
+    "id": "proj-nhai-001",
+    "title": "NHAI Highway Drainage — Jaipur Section",
+    "location": "Jaipur, Rajasthan",
+    "year": 2023,
+    "client": "NHAI",
+    "scope": "Supply of SN8 sewer pipes and perforated drainage lines for highway drainage under the Jaipur bypass improvement program.",
+    "image": "assets/images/projects/ChatGPT Image Nov 1, 2025, 03_09_24 PM.png",
+    "status": "Completed",
+    "details": "Wonder+ Pipes supplied over 2,500 meters of SN8 double-wall corrugated pipes for the NHAI Jaipur Highway project. The project included technical design support for drainage gradients and logistics for on-site delivery across multiple phases. Testing and QA documentation was provided with each lot ensuring compliance to IS 15328:2003."
+  },
+  {
+    "id": "proj-pwd-002",
+    "title": "City Sewage Rehabilitation Project",
+    "location": "Ajmer, Rajasthan",
+    "year": 2024,
+    "client": "PWD Rajasthan",
+    "scope": "Supply of uPVC SWR pipes and fittings for municipal sewerage rehabilitation.",
+    "image": "assets/images/projects/ChatGPT Image Nov 1, 2025, 03_11_34 PM.png",
+    "status": "Ongoing",
+    "details": "In partnership with Rajasthan PWD, Wonder+ Pipes is providing ISI 4985 compliant uPVC pipes and fittings for Ajmer city's sewer network overhaul. The supply includes 110mm–250mm diameter lines, scheduled delivery coordination, and lab testing for each consignment to ensure consistent tensile and hydrostatic strength."
+  },
+  {
+    "id": "proj-yeida-003",
+    "title": "YEIDA Stormwater Management",
+    "location": "Greater Noida, Uttar Pradesh",
+    "year": 2022,
+    "client": "YEIDA (Yamuna Expressway Industrial Development Authority)",
+    "scope": "Design and supply of perforated drainage and filtration pipes for stormwater collection systems.",
+    "image": "assets/images/projects/ChatGPT Image Nov 1, 2025, 03_14_05 PM.png",
+    "status": "Completed",
+    "details": "Wonder+ Pipes supplied perforated drainage and filtration pipes used for underground stormwater collection networks within the YEIDA area. The solution improved water percolation and helped manage seasonal flooding. Each delivery was accompanied by a batch QC report and field support for installation."
+  },
+  {
+    "id": "proj-jda-004",
+    "title": "JDA Smart City Storm Drain Upgrade",
+    "location": "Jaipur, Rajasthan",
+    "year": 2023,
+    "client": "Jaipur Development Authority",
+    "scope": "uPVC SN8 pipes and couplers for smart drainage project.",
+    "image": "assets/images/projects/ChatGPT Image Nov 1, 2025, 03_18_03 PM.png",
+    "status": "Completed",
+    "details": "Under the Smart City initiative, Wonder+ Pipes delivered SN8 corrugated and uPVC solid wall pipes for underground stormwater drainage in key Jaipur corridors. Supplies were managed phase-wise with on-site technical support and post-installation performance testing."
+  },
+  {
+    "id": "proj-nagar-005",
+    "title": "Nagar Palika Waterline Expansion",
+    "location": "Kishangarh, Rajasthan",
+    "year": 2024,
+    "client": "Nagar Palika Kishangarh",
+    "scope": "Waterline expansion using uPVC rigid pipes and fittings.",
+    "image": "assets/images/projects/ChatGPT Image Nov 1, 2025, 03_21_18 PM.png",
+    "status": "Ongoing",
+    "details": "For the Nagar Palika water supply upgrade, Wonder+ Pipes provided high-pressure uPVC pipes ranging from DN63 to DN200. Each batch was tested for dimensional accuracy, pressure performance, and material quality. Project execution continues with rolling supplies as per demand."
+  }
+]
+

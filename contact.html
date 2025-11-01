@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Wonder+ Pipes</title>
+  <meta name="description" content="Contact Wonder+ Pipes for quotes, orders and enquiries." />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo/logo.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <style>#map{width:100%;height:320px;border-radius:8px}</style>
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo/logo.png" alt="logo" class="brand__logo"><span class="brand__name">Wonder+ Pipes</span></a>
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <nav id="main-nav" class="nav"><ul class="nav__list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="projects.html">Projects</a></li><li><a href="quality.html">Quality</a></li><li><a href="contact.html" class="active btn btn--outline">Contact</a></li></ul></nav>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Get in touch</h1>
+        <p class="section-sub">For quotations, product specs, dealer enquiries or factory visits — drop us a message and our sales team will respond.</p>
+
+        <div style="display:grid; grid-template-columns:1fr 420px; gap:2rem; align-items:start;">
+          <div>
+            <div class="card" style="padding:1rem">
+              <form id="contactForm" novalidate>
+                <input type="hidden" name="_subject" value="Website enquiry — Wonder+ Pipes">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" required placeholder="Your full name" style="width:100%; padding:.6rem; margin:.35rem 0 1rem; border-radius:8px; border:1px solid #e6eef5;">
+
+                <label for="company">Company (optional)</label>
+                <input id="company" name="company" type="text" placeholder="Company name" style="width:100%; padding:.6rem; margin:.35rem 0 1rem; border-radius:8px; border:1px solid #e6eef5;">
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@company.com" style="width:100%; padding:.6rem; margin:.35rem 0 1rem; border-radius:8px; border:1px solid #e6eef5;">
+
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" required placeholder="+91 9XXXXXXXXX" style="width:100%; padding:.6rem; margin:.35rem 0 1rem; border-radius:8px; border:1px solid #e6eef5;">
+
+                <label for="message">Message / Project details</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project..." style="width:100%; padding:.6rem; margin:.35rem 0 1rem; border-radius:8px; border:1px solid #e6eef5;"></textarea>
+
+                <div style="display:flex; gap:.5rem; align-items:center;">
+                  <button type="submit" class="btn">Send message</button>
+                  <button type="reset" class="btn btn--outline">Reset</button>
+                  <div id="formStatus" style="margin-left:12px; color:var(--color-muted); font-weight:600;"></div>
+                </div>
+              </form>
+            </div>
+            <p class="muted" style="margin-top:.75rem">Phone: <a href="tel:+919351428939">9351428939</a> — Email: <a href="mailto:rgpolymers.jpr@gmail.com">rgpolymers.jpr@gmail.com</a></p>
+          </div>
+
+          <aside>
+            <div class="card" style="padding:0; overflow:hidden">
+              <div id="map" role="application" aria-label="Map showing manufacturing location"></div>
+              <div style="padding:.75rem">
+                <small class="muted">Bagru Industrial Area — approximate location. <a href="https://www.google.com/maps/search/?api=1&query=26.8093,75.5417" target="_blank" rel="noopener">Open in Google Maps</a></small>
+              </div>
+            </div>
+
+            <div class="card" style="padding:1rem; margin-top:1rem">
+              <h4 style="margin:0 0 .5rem">Office & Factory</h4>
+              <p class="muted" style="margin:0"><strong>Head Office:</strong> B-207, Vaishali Nagar, Jaipur</p>
+              <p class="muted" style="margin:0"><strong>Manufacturing:</strong> G-153-54, Bagru Industrial Area (Ext), Jaipur</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/images/logo/logo.png" alt="logo" width="140"><p class="muted">Manufacturing: Bagru Industrial Area, Jaipur</p></div>
+      <div class="footer-links"><h4>Quick links</h4><ul><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="projects.html">Projects</a></li><li><a href="quality.html">Quality</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact</h4><p>Phone: <a href="tel:+919351428939">9351428939</a></p><p>Email: <a href="mailto:rgpolymers.jpr@gmail.com">rgpolymers.jpr@gmail.com</a></p></div>
+    </div>
+    <div class="site-credit"><div class="container"><small>© <span id="year-contact"></span> Wonder+ Pipes & Fittings — All rights reserved.</small></div></div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+    // map init
+    (function(){
+      const lat = 26.8093, lng = 75.5417;
+      if(typeof L !== 'undefined'){
+        const map = L.map('map', { scrollWheelZoom:false }).setView([lat,lng],13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom:19, attribution:'&copy; OpenStreetMap' }).addTo(map);
+        const marker = L.marker([lat,lng]).addTo(map).bindPopup('Wonder+ Pipes — Manufacturing (approx)').openPopup();
+      }
+    })();
+
+    // form submit (client-side, Formspree placeholder)
+    (function(){
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      if(!form) return;
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = 'Sending…';
+        const formData = new FormData(form);
+        const endpoint = 'https://formspree.io/f/YOUR_FORMSPREE_ID';
+        const name = formData.get('name')||'', email=formData.get('email')||'', message=formData.get('message')||'', phone=formData.get('phone')||'';
+        if(!name.trim()||!email.trim()||!message.trim()||!phone.trim()){ status.textContent='Please fill required fields.'; status.style.color='#c0392b'; return; }
+        try{
+          const res = await fetch(endpoint, { method:'POST', headers:{ 'Accept':'application/json' }, body: formData });
+          if(res.ok){ status.textContent='Thank you — message sent.'; status.style.color='green'; form.reset(); } else { status.textContent='Submission failed. Try again later.'; status.style.color='#c0392b'; }
+        }catch(err){ console.error(err); status.textContent='Network error. Try again later.'; status.style.color='#c0392b'; }
+      });
+    })();
+
+    
+    document.getElementById('year-contact').textContent = new Date().getFullYear();
+    (function(){const navToggle=document.querySelector('.nav-toggle');const mainNav=document.getElementById('main-nav');navToggle.addEventListener('click',()=>{const expanded=navToggle.getAttribute('aria-expanded')==='true'||false;navToggle.setAttribute('aria-expanded',!expanded);mainNav.classList.toggle('nav--open');});})();
+  </script>
+</body>
+</html>
+

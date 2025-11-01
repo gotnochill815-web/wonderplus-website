@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quality & Certifications — Wonder+ Pipes</title>
+  <meta name="description" content="Quality policy, testing and certifications — Wonder+ Pipes lab and QA." />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo/logo.png">
+
+  <!-- Page-specific small CSS for certificates and lightbox -->
+  <style>
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .certificate-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(8,18,31,0.06);
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform .14s ease, box-shadow .14s ease;
+      cursor: pointer;
+      min-height: 200px;
+    }
+    .certificate-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(8,18,31,0.08);
+    }
+
+    .certificate-card img {
+      width: 100%;
+      height: 160px;
+      max-width: 320px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin-bottom: .6rem;
+      background: #f9fbfc;
+      padding: 8px;
+    }
+    .certificate-card h4 {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--color-primary);
+    }
+
+    /* simple lightbox modal */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(6,22,40,0.65);
+      z-index: 1200;
+      padding: 1.5rem;
+    }
+    .lightbox.open { display:flex; }
+    .lightbox-panel {
+      max-width: 1100px;
+      width: 100%;
+      max-height: 92vh;
+      background: #fff;
+      border-radius: 10px;
+      overflow: auto;
+      box-shadow: 0 30px 80px rgba(8,18,31,0.5);
+      position: relative;
+    }
+    .lightbox-panel img {
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:contain;
+      border-radius: 8px 8px 0 0;
+      background:#fff;
+    }
+    .lightbox-close {
+      position:absolute;
+      top:10px;
+      right:10px;
+      background:transparent;
+      border:none;
+      font-size:20px;
+      cursor:pointer;
+      padding:.5rem;
+    }
+    .lightbox-caption {
+      padding: .9rem 1rem 1.25rem;
+      font-size: .95rem;
+      color: #223;
+    }
+
+    @media (max-width:720px){
+      .certificate-card img { height: 140px; }
+      .lightbox-panel { max-width: 94%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo/logo.png" alt="Wonder+ Pipes logo" class="brand__logo">
+        <span class="brand__name">Wonder+ Pipes</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="quality.html" class="active">Quality</a></li>
+          <li><a href="contact.html" class="btn btn--outline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Quality & Certifications</h1>
+        <p class="section-sub">Our commitment to quality — accredited laboratories, certified processes, and standards-compliant manufacturing.</p>
+
+        <div style="display:grid; grid-template-columns:1fr 360px; gap:2rem; align-items:start; margin-top:1.25rem;">
+          <div>
+            <h3 style="margin-top:0">Quality Policy</h3>
+            <p>Wonder+ Pipes maintains strict incoming material checks, in-process QC, and pre-dispatch inspections to ensure full compliance with standards and customer satisfaction. Detailed test certificates are included with each major dispatch.</p>
+
+            <h3>Certificates</h3>
+
+            <!-- START: Fixed certificates grid -->
+            <div class="certificates-grid" id="certsGrid">
+              <div class="certificate-card" tabindex="0" data-src="assets/images/certificates/Screenshot 2025-10-31 231318.png" data-title="ISO 9001">
+                <img src="assets/images/certificates/Screenshot 2025-10-31 231318.png" alt="ISO 9001 Certificate" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'">
+                <h4>ISO 9001</h4>
+              </div>
+
+              <div class="certificate-card" tabindex="0" data-src="assets/images/certificates/Screenshot 2025-10-31 231329.png" data-title="BIS / ISI">
+                <img src="assets/images/certificates/Screenshot 2025-10-31 231329.png" alt="BIS / ISI Certificate" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'">
+                <h4>BIS / ISI</h4>
+              </div>
+
+              <div class="certificate-card" tabindex="0" data-src="assets/images/certificates/Screenshot 2025-10-31 231236.png" data-title="CIPET">
+                <img src="assets/images/certificates/Screenshot 2025-10-31 231236.png" alt="CIPET Certificate" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'">
+                <h4>CIPET</h4>
+              </div>
+
+              <div class="certificate-card" tabindex="0" data-src="assets/images/certificates/Screenshot 2025-10-31 231348.png" data-title="GreenCo Platinum">
+                <img src="assets/images/certificates/Screenshot 2025-10-31 231348.png" alt="GreenCo Certificate" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'">
+                <h4>GreenCo Platinum</h4>
+              </div>
+
+              <div class="certificate-card" tabindex="0" data-src="assets/images/certificates/Screenshot 2025-10-31 231358.png" data-title="Environmental Compliance">
+                <img src="assets/images/certificates/Screenshot 2025-10-31 231358.png" alt="Environmental Compliance" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'">
+                <h4>Environmental Compliance</h4>
+              </div>
+            </div>
+            <!-- END: certificates grid -->
+
+          </div>
+
+          <!-- RIGHT SIDEBAR -->
+          <aside>
+            <div class="card" style="padding:1rem">
+              <h4 style="margin:0 0 .5rem">Testing Lab Snapshot</h4>
+              <img src="assets/images/factory/hero-pipes.jpg" alt="Testing lab snapshot" style="width:100%; border-radius:8px; object-fit:cover;" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'">
+              <p style="margin-top:.6rem" class="muted">Our lab issues batch-wise certificates and test reports with every shipment.</p>
+            </div>
+
+            <div class="card" style="padding:1rem; margin-top:1rem">
+              <h4 style="margin:0 0 .5rem">Quality Contact</h4>
+              <p class="muted">For technical queries or certification requests, contact our Quality Head:</p>
+              <p style="margin:.5rem 0 0"><strong>quality@wonderplus.example</strong></p>
+              <p style="margin:.25rem 0 0">Phone: <a href="tel:+919351428939">9351428939</a></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div id="certLightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Certificate preview">
+    <div class="lightbox-panel" role="document">
+      <button class="lightbox-close" aria-label="Close">✕</button>
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo/logo.png" alt="Wonder+ Pipes logo" width="140">
+        <p class="muted">Manufacturing: G-153-54, Bagru Industrial Area (Ext), Jaipur, Rajasthan</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:+919351428939">9351428939</a></p>
+        <p>Email: <a href="mailto:rgpolymers.jpr@gmail.com">rgpolymers.jpr@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="site-credit">
+      <div class="container"><small>© <span id="year-quality"></span> Wonder+ Pipes — All rights reserved.</small></div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Update footer year
+    document.getElementById('year-quality').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function(){
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.getElementById('main-nav');
+      if(navToggle && mainNav){
+        navToggle.addEventListener('click', ()=> {
+          const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+          navToggle.setAttribute('aria-expanded', !expanded);
+          mainNav.classList.toggle('nav--open');
+        });
+      }
+    })();
+
+    // Lightbox logic
+    (function(){
+      const grid = document.getElementById('certsGrid');
+      const lightbox = document.getElementById('certLightbox');
+      const lbImg = document.getElementById('lightboxImg');
+      const lbCaption = document.getElementById('lightboxCaption');
+      const closeBtn = document.querySelector('.lightbox-close');
+
+      function open(src, title, alt){
+        lbImg.src = src;
+        lbImg.alt = alt || title || 'Certificate';
+        lbCaption.textContent = title || '';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close(){
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden','true');
+        lbImg.src = '';
+        document.body.style.overflow = '';
+      }
+
+      // open on click or Enter key
+      grid.addEventListener('click', (e)=>{
+        const card = e.target.closest('.certificate-card');
+        if(!card) return;
+        open(card.dataset.src || card.querySelector('img').src, card.dataset.title || '', card.querySelector('img').alt);
+      });
+      grid.addEventListener('keydown', (e)=>{
+        if((e.key === 'Enter' || e.key === ' ') && e.target.closest('.certificate-card')){
+          e.preventDefault();
+          const card = e.target.closest('.certificate-card');
+          open(card.dataset.src || card.querySelector('img').src, card.dataset.title || '', card.querySelector('img').alt);
+        }
+      });
+
+      // close handlers
+      closeBtn.addEventListener('click', close);
+      lightbox.addEventListener('click', (e)=>{
+        if(e.target === lightbox) close();
+      });
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+    })();
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — Wonder+ Pipes</title>
+  <meta name="description" content="Products — uPVC, SN8, Perforated Pipes and Fittings by Wonder+ Pipes." />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo/logo.png">
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo/logo.png" alt="Wonder+ Pipes logo" class="brand__logo">
+        <span class="brand__name">Wonder+ Pipes</span>
+      </a>
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <nav id="main-nav" class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="quality.html">Quality</a></li>
+          <li><a href="contact.html" class="btn btn--outline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="section">
+    <div class="container" style="display:flex; gap:1.5rem; align-items:center;">
+      <div style="flex:1">
+        <h1 class="section-title">Products</h1>
+        <p class="section-sub">Explore our product lines — uPVC SWR, SN8 sewer pipes, perforated drainage pipes and fittings.</p>
+      </div>
+      <div style="width:320px">
+        <a href="contact.html" class="btn" style="display:inline-block; width:100%; text-align:center">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- product filters and grid -->
+  <section class="section section--alt">
+    <div class="container">
+      <div style="display:flex; gap:.5rem; margin-bottom:1rem; align-items:center; flex-wrap:wrap;">
+        <button class="btn btn--outline" data-filter="all" aria-pressed="true">All</button>
+        <button class="btn btn--outline" data-filter="upvc">uPVC</button>
+        <button class="btn btn--outline" data-filter="sn8">SN8</button>
+        <button class="btn btn--outline" data-filter="perforated">Perforated</button>
+        <button class="btn btn--outline" data-filter="fittings">Fittings</button>
+      </div>
+
+      <div id="products-grid" class="product-grid" aria-live="polite"></div>
+
+      <!-- product modal -->
+      <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-panel">
+          <button class="modal-close" aria-label="Close">✕</button>
+          <div id="modal-content"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/images/logo/logo.png" alt="logo" width="140"><p class="muted">Manufacturing: Bagru Industrial Area, Jaipur</p></div>
+      <div class="footer-links"><h4>Quick links</h4><ul><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="quality.html">Quality</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact</h4><p>Phone: <a href="tel:+919351428939">9351428939</a></p><p>Email: <a href="mailto:rgpolymers.jpr@gmail.com">rgpolymers.jpr@gmail.com</a></p></div>
+    </div>
+    <div class="site-credit"><div class="container"><small>© <span id="year-products"></span> Wonder+ Pipes — All rights reserved.</small></div></div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script>
+    document.getElementById('year-products').textContent = new Date().getFullYear();
+    (function(){const navToggle=document.querySelector('.nav-toggle');const mainNav=document.getElementById('main-nav');navToggle.addEventListener('click',()=>{const expanded=navToggle.getAttribute('aria-expanded')==='true'||false;navToggle.setAttribute('aria-expanded',!expanded);mainNav.classList.toggle('nav--open');});})();
+  </script>
+</body>
+</html>

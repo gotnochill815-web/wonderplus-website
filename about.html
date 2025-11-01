@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Wonder+ Pipes & Fittings</title>
+  <meta name="description" content="About Wonder+ Pipes — Manufacturer of uPVC SWR, SN8, perforated pipes and fittings. ISO 9001:2015 certified." />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo/logo.png">
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo/logo.png" alt="Wonder+ Pipes logo" class="brand__logo">
+        <span class="brand__name">Wonder+ Pipes</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="quality.html">Quality</a></li>
+          <li><a href="contact.html" class="btn btn--outline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="section">
+    <div class="container" style="display:grid; grid-template-columns:1fr 380px; gap:2rem; align-items:center;">
+      <div>
+        <h1 class="section-title">About Wonder+ Pipes</h1>
+        <p class="section-sub">Quality-focused manufacturer of uPVC, SN8 and perforated pipes for plumbing, irrigation and infrastructure projects. ISO 9001:2015 certified with a dedicated testing lab and supply chain for project deliveries.</p>
+
+        <h3>Who we are</h3>
+        <p>Wonder+ Pipes is an experienced piping manufacturer headquartered in Jaipur. We supply municipal, highway and commercial projects with ISI and ISO certified piping solutions and active technical support.</p>
+
+        <h3>Our capabilities</h3>
+        <ul>
+          <li>Monthly capacity ~200 MT with phased delivery coordination</li>
+          <li>ISI 4985 / IS 15328 compliance testing & certifications</li>
+          <li>In-house lab for tensile, hydrostatic and dimensional tests</li>
+          <li>Turnkey logistics for large projects</li>
+        </ul>
+      </div>
+
+      <aside>
+        <div class="card" style="padding:1rem">
+          <h4 style="margin:0 0 .5rem">Quick facts</h4>
+          <p class="muted" style="margin:0"><strong>Established:</strong> 2012</p>
+          <p class="muted" style="margin:0"><strong>Location:</strong> Bagru Industrial Area, Jaipur</p>
+          <p class="muted" style="margin:0"><strong>Phone:</strong> <a href="tel:+919351428939">9351428939</a></p>
+        </div>
+
+        <div class="card" style="padding:1rem; margin-top:1rem">
+          <h4 style="margin:0 0 .5rem">Certifications</h4>
+          <p class="muted" style="margin:0">BIS / ISI, ISO 9001:2015, CIPET and GreenCo (where applicable). Full batch certificates provided on request.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo/logo.png" alt="logo" width="140">
+        <p class="muted">Manufacturing: G-153-54, Bagru Industrial Area (Ext), Jaipur, Rajasthan</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="quality.html">Quality</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:+919351428939">9351428939</a></p>
+        <p>Email: <a href="mailto:rgpolymers.jpr@gmail.com">rgpolymers.jpr@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="site-credit">
+      <div class="container"><small>© <span id="year-about"></span> Wonder+ Pipes — All rights reserved.</small></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-about').textContent = new Date().getFullYear();
+    (function(){const navToggle=document.querySelector('.nav-toggle');const mainNav=document.getElementById('main-nav');navToggle.addEventListener('click',()=>{const expanded=navToggle.getAttribute('aria-expanded')==='true'||false;navToggle.setAttribute('aria-expanded',!expanded);mainNav.classList.toggle('nav--open');});})();
+  </script>
+</body>
+</html>
+

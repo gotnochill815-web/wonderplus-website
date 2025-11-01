@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Wonder+ Pipes</title>
+  <meta name="description" content="Projects & case studies — Wonder+ Pipes supplied piping solutions to government and private infrastructure projects." />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo/logo.png">
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo/logo.png" alt="logo" class="brand__logo"><span class="brand__name">Wonder+ Pipes</span></a>
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <nav id="main-nav" class="nav"><ul class="nav__list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="projects.html" class="active">Projects</a></li><li><a href="quality.html">Quality</a></li><li><a href="contact.html" class="btn btn--outline">Contact</a></li></ul></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Projects & Case Studies</h1>
+        <p class="section-sub">Selected projects where Wonder+ Pipes supplied materials, testing and on-site support.</p>
+
+        <div style="margin:1rem 0 1.25rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+          <input id="search" type="search" placeholder="Search projects (client, location, year)..." style="padding:.5rem; border-radius:8px; border:1px solid #e6eef5; width:320px;">
+          <select id="filterStatus" style="padding:.45rem; border-radius:8px; border:1px solid #e6eef5;">
+            <option value="all">All status</option>
+            <option value="Completed">Completed</option>
+            <option value="Ongoing">Ongoing</option>
+          </select>
+          <a href="contact.html" class="btn" style="margin-left:auto">Request Quote</a>
+        </div>
+
+        <div id="projects-grid" class="product-grid" aria-live="polite"></div>
+
+        <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+          <div class="modal-panel">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <div id="project-modal-content"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/images/logo/logo.png" alt="logo" width="140"><p class="muted">Manufacturing: Bagru Industrial Area, Jaipur</p></div>
+      <div class="footer-links"><h4>Quick links</h4><ul><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="quality.html">Quality</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact</h4><p>Phone: <a href="tel:+919351428939">9351428939</a></p><p>Email: <a href="mailto:rgpolymers.jpr@gmail.com">rgpolymers.jpr@gmail.com</a></p></div>
+    </div>
+    <div class="site-credit"><div class="container"><small>© <span id="year-projects"></span> Wonder+ Pipes — All rights reserved.</small></div></div>
+  </footer>
+
+  <script>
+    // Inlined project loader (same behavior as earlier projects.html)
+    const sampleProjects = [
+      {"id":"proj-nhai-001","title":"NHAI Highway Drainage — Jaipur Section","location":"Jaipur, Rajasthan","year":2023,"client":"NHAI","scope":"Supply of SN8 sewer pipes and perforated drainage lines for highway drainage.","image":"assets/images/projects/ChatGPT Image Nov 1, 2025, 03_09_24 PM.png","status":"Completed","details":"Supplied 2,500m of SN8 sewer pipes with QA documentation and phased delivery."},
+      {"id":"proj-pwd-002","title":"City Sewage Rehabilitation","location":"Ajmer, Rajasthan","year":2024,"client":"PWD Rajasthan","scope":"Supply of uPVC SWR pipes and fittings for municipal sewerage rehabilitation.","image":"assets/images/projects/ChatGPT Image Nov 1, 2025, 03_11_34 PM.png","status":"Ongoing","details":"Scheduled deliveries and batch QC for each lot."},
+      {"id":"proj-yeida-003","title":"YEIDA Stormwater Management","location":"Greater Noida, UP","year":2022,"client":"YEIDA","scope":"Perforated drainage and filtration piping for stormwater collection systems.","image":"assets/images/projects/ChatGPT Image Nov 1, 2025, 03_14_05 PM.png","status":"Completed","details":"Perforated piping with geotextile sleeve for stormwater drains."}
+    ];
+
+    function renderProjects(projects){
+      const grid = document.getElementById('projects-grid'); grid.innerHTML='';
+      projects.forEach(p=>{
+        const card=document.createElement('article'); card.className='product-card';
+        card.innerHTML=`<img src="${p.image}" alt="${p.title}" class="product-img" onerror="this.onerror=null;this.src='assets/images/products/products-banner.jpg'">
+          <h3 class="product-title">${p.title}</h3>
+          <p class="product-desc">${p.scope}</p>
+          <p style="margin:0;color:var(--color-muted);"><strong>Client:</strong> ${p.client} • <strong>Year:</strong> ${p.year}</p>
+          <div style="display:flex; gap:.5rem; align-items:center; margin-top:.6rem;">
+            <a href="#${p.id}" class="product-link" data-id="${p.id}">View details →</a>
+            <a href="contact.html" class="btn btn--outline" style="margin-left:auto">Request Quote</a>
+          </div>`;
+        grid.appendChild(card);
+      });
+      // attach modal openers
+      grid.querySelectorAll('.product-link').forEach(a=>{
+        a.addEventListener('click', e=>{
+          e.preventDefault();
+          const id=a.dataset.id; openProjectModal(id, projects);
+        });
+      });
+    }
+
+    function openProjectModal(id, projects){ const modal=document.getElementById('project-modal'); const content=document.getElementById('project-modal-content'); const project=projects.find(x=>x.id===id); if(!project) return;
+      content.innerHTML=`<h2 style="margin-top:0">${project.title}</h2>
+        <img src="${project.image}" alt="${project.title}" style="width:100%; max-height:260px; object-fit:cover; border-radius:8px; margin-bottom:1rem;" onerror="this.onerror=null;this.src='assets/images/products/products-banner.jpg'">
+        <p class="muted"><strong>Client:</strong> ${project.client} • <strong>Location:</strong> ${project.location} • <strong>Year:</strong> ${project.year}</p>
+        <p style="margin-top:.6rem">${project.scope}</p>
+        ${project.details?`<div style="margin-top:1rem"><h4>Details</h4><p>${project.details}</p></div>`:''}
+        <div style="margin-top:1rem; display:flex; gap:.5rem;"><a href="contact.html" class="btn">Request Quote</a><a href="#" class="btn btn--alt modal-close">Close</a></div>`;
+      modal.style.display='block'; modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+    }
+
+    // modal handlers
+    (function(){ const modal=document.getElementById('project-modal'); modal.addEventListener('click', e=>{ if(e.target===modal){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }}); document.addEventListener('click', e=>{ if(e.target.matches('.modal-close')){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }}); })();
+
+    // search & filter
+    function initSearchAndFilter(projects){
+      const input=document.getElementById('search'); const statusSel=document.getElementById('filterStatus');
+      function apply(){
+        const q=input.value.trim().toLowerCase(); const status=statusSel.value;
+        const filtered=projects.filter(p=>{
+          const matchesQ=!q || [p.title,p.client,p.location,String(p.year)].join(' ').toLowerCase().includes(q);
+          const matchesStatus=status==='all'||p.status===status;
+          return matchesQ && matchesStatus;
+        });
+        renderProjects(filtered);
+      }
+      input.addEventListener('input', ()=> apply());
+      statusSel.addEventListener('change', apply);
+      renderProjects(projects);
+    }
+
+    document.getElementById('year-projects').textContent = new Date().getFullYear();
+    (function(){const navToggle=document.querySelector('.nav-toggle');const mainNav=document.getElementById('main-nav');navToggle.addEventListener('click',()=>{const expanded=navToggle.getAttribute('aria-expanded')==='true'||false;navToggle.setAttribute('aria-expanded',!expanded);mainNav.classList.toggle('nav--open');});})();
+    initSearchAndFilter(sampleProjects);
+  </script>
+</body>
+</html>

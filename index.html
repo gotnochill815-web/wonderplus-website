@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wonder+ Pipes & Fittings</title>
+  <meta name="description" content="Wonder+ Pipes — Manufacturer of uPVC SWR, SN8, perforated pipes and fittings. ISO 9001:2015 certified." />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo/logo.png">
+
+  <!-- Small page-specific overrides to match Ashirvad-like layout -->
+  <style>
+    /* full-width hero */
+    .hero-landing {
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+      display:block;
+    }
+    .hero-landing .hero-bg {
+      position: absolute;
+      inset:0;
+      background-size: cover;
+      background-position: center center;
+      z-index:0;
+      filter: contrast(.95) brightness(.92);
+      transform: scale(1.02);
+    }
+    .hero-landing::after{
+      content:"";
+      position:absolute; inset:0;
+      /* dark gradient overlay */
+      background: linear-gradient(180deg, rgba(6,22,40,0.40) 0%, rgba(6,22,40,0.10) 60%, rgba(6,22,40,0.00) 100%);
+      z-index:1;
+    }
+    .hero-landing .hero-inner{
+      position:relative; z-index:2; padding:5.25rem 0;
+      display:flex; align-items:center; gap:2rem;
+    }
+    .hero-landing .hero-left{ flex:1; max-width:820px; color:#fff }
+    .hero-landing .hero-left h1{ font-size:2.6rem; line-height:1.02; margin-bottom:0.75rem }
+    .hero-landing .hero-left p{ color:rgba(255,255,255,0.88); margin-bottom:1rem; font-size:1.05rem }
+    .hero-landing .hero-ctas{ display:flex; gap:.75rem; align-items:center; margin-bottom:1rem }
+    .hero-landing .hero-ctas .btn{ font-size:1rem; padding:.7rem 1.05rem; border-radius:10px }
+    .hero-landing .hero-right{ width:420px; min-width:260px; display:flex; justify-content:center }
+    .hero-landing .hero-card{
+      background: rgba(255,255,255,0.95); color:var(--color-primary); border-radius:14px; padding:1rem; width:100%;
+      box-shadow: 0 14px 40px rgba(8,18,31,0.07);
+    }
+    .hero-landing .hero-card img{ width:100%; border-radius:8px; display:block; object-fit:cover; }
+
+    /* product categories row */
+    .categories { display:flex; gap:1rem; margin-top:1.75rem; flex-wrap:wrap; align-items:stretch }
+    .cat-card { flex:1 1 220px; background:var(--color-surface); border-radius:12px; padding:1rem; box-shadow:var(--shadow-sm); display:flex; gap:.75rem; align-items:center }
+    .cat-card img{ width:78px; height:64px; object-fit:cover; border-radius:8px }
+    .cat-card h4{ margin:0; font-size:1.02rem; color:var(--color-primary) }
+    .cat-card p{ margin:0; color:var(--color-muted); font-size:.92rem }
+
+    /* trust / certs */
+    .trust-row{ display:flex; gap:1rem; align-items:center; justify-content:space-between; margin-top:2rem; flex-wrap:wrap }
+    .trust-badge { display:flex; gap:.6rem; align-items:center; background:var(--color-surface); padding:.6rem .9rem; border-radius:10px; box-shadow:var(--shadow-sm) }
+    .trust-badge img{ height:36px; width:auto }
+
+    /* projects preview */
+    .projects-preview { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1rem }
+
+    /* responsive tweaks */
+    @media (max-width:900px){
+      .hero-landing .hero-inner{ flex-direction:column; padding:3rem 0 }
+      .hero-landing .hero-right{ width:100% }
+      .hero-landing .hero-left h1{ font-size:1.7rem }
+    }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" style="display:flex;align-items:center;gap:.6rem">
+        <img src="assets/images/logo/logo.png" alt="Wonder+ Pipes logo" class="brand__logo" style="height:42px">
+        <span class="brand__name">Wonder+ Pipes</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="quality.html">Quality</a></li>
+          <li><a href="contact.html" class="btn btn--outline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO (full width like Ashirvad) -->
+  <section class="hero-landing" aria-labelledby="hero-title">
+    <div class="hero-bg" style="background-image:url('assets/images/products/products-banner.jpg');"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1 id="hero-title">Trusted piping solutions for infrastructure & plumbing</h1>
+        <p>High-quality uPVC, SN8 and perforated pipes with certified testing, project support and nationwide delivery. ISO 9001:2015 standard manufacturing and quality control.</p>
+
+        <div class="hero-ctas">
+          <a class="btn" href="products.html">View Products</a>
+          <a class="btn btn--alt" href="contact.html">Request Quote</a>
+        </div>
+
+        <ul class="quick-facts" style="display:flex; gap:1.25rem; margin:0; padding:0; list-style:none; color:rgba(255,255,255,0.9); font-weight:600">
+          <li><strong>Capacity:</strong> ~200 MT / month</li>
+          <li><strong>Certifications:</strong> BIS, ISI, ISO 9001</li>
+          <li><strong>Location:</strong> Bagru Industrial Area, Jaipur</li>
+        </ul>
+
+        <!-- categories row -->
+        <div class="categories" style="margin-top:1.5rem">
+          <a class="cat-card" href="products.html#upvc" title="uPVC Pipes">
+            <img src="assets/images/products/ChatGPT Image Nov 1, 2025, 03_48_43 PM.png" alt="uPVC">
+            <div>
+              <h4>uPVC Pipes (SWR)</h4>
+              <p>Reliable plumbing pipes — ISI / BIS certified.</p>
+            </div>
+          </a>
+
+          <a class="cat-card" href="products.html#sn8" title="SN8 Pipes">
+            <img src="assets/images/products/ChatGPT Image Nov 1, 2025, 03_50_26 PM.png" alt="SN8">
+            <div>
+              <h4>SN8 Sewer Pipes</h4>
+              <p>High-stiffness drainage solutions for infrastructure.</p>
+            </div>
+          </a>
+
+          <a class="cat-card" href="products.html#fittings" title="Fittings">
+            <img src="assets/images/products/ChatGPT Image Nov 1, 2025, 03_57_59 PM.png" alt="Fittings">
+            <div>
+              <h4>Fittings & Couplers</h4>
+              <p>Couplers, bends, tees — ready for installation.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-right" aria-hidden="true">
+        <div class="hero-card">
+          <h4 style="margin:0 0 .5rem">Testing Lab Snapshot</h4>
+          <img src="assets/images/factory/hero-pipes.jpg" alt="Testing lab" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'">
+          <p style="margin-top:.6rem; color:var(--color-muted)">Our lab conducts tensile, hydrostatic and dimensional tests for every batch. Certificates available on request.</p>
+          <p style="margin-top:.6rem"><a href="quality.html" class="btn btn--alt">View Quality</a></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRUST / CERTS -->
+  <section class="section">
+    <div class="container">
+      <div class="trust-row">
+        <div style="flex:1">
+          <h3 class="section-title" style="margin:0">Quality & Certifications</h3>
+          <p class="section-sub" style="margin:0">Accredited labs, ISI/BIS compliance and documented QA for every dispatch.</p>
+        </div>
+
+        <div style="display:flex; gap:.75rem; align-items:center; flex-wrap:wrap;">
+          <div class="trust-badge"><img src="assets/images/certificates/Screenshot 2025-10-31 231318.png" alt="cert" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'"><small class="muted">ISO 9001:2015</small></div>
+          <div class="trust-badge"><img src="assets/images/certificates/Screenshot 2025-10-31 231329.png" alt="cert" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'"><small class="muted">BIS / ISI</small></div>
+          <div class="trust-badge"><img src="assets/images/certificates/Screenshot 2025-10-31 231236.png" alt="cert" onerror="this.onerror=null;this.src='assets/images/logo/logo.png'"><small class="muted">CIPET</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT HIGHLIGHTS -->
+  <section class="section section--alt">
+    <div class="container">
+      <h3 style="margin:0 0 .6rem">Selected Projects</h3>
+      <p class="muted">Project work with government and private infra — click to view case studies.</p>
+
+      <div class="projects-preview">
+        <article class="card" style="padding:1rem">
+          <img src="assets/images/projects/ChatGPT Image Nov 1, 2025, 03_09_24 PM.png" alt="project" style="width:100%; height:140px; object-fit:cover; border-radius:8px">
+          <h4 style="margin:.6rem 0 0">NHAI Highway Drainage</h4>
+          <p class="muted" style="margin:.25rem 0 0; font-size:.95rem">Supply of SN8 sewer pipes and testing for highway drainage works.</p>
+        </article>
+
+        <article class="card" style="padding:1rem">
+          <img src="assets/images/projects/ChatGPT Image Nov 1, 2025, 03_11_34 PM.png" alt="project" style="width:100%; height:140px; object-fit:cover; border-radius:8px">
+          <h4 style="margin:.6rem 0 0">City Sewage Rehabilitation</h4>
+          <p class="muted" style="margin:.25rem 0 0; font-size:.95rem">uPVC SWR supplies and fittings for municipal works.</p>
+        </article>
+
+        <article class="card" style="padding:1rem">
+          <img src="assets/images/projects/ChatGPT Image Nov 1, 2025, 03_14_05 PM.png" alt="project" style="width:100%; height:140px; object-fit:cover; border-radius:8px">
+          <h4 style="margin:.6rem 0 0">Stormwater Management</h4>
+          <p class="muted" style="margin:.25rem 0 0; font-size:.95rem">Perforated drainage solutions for large catchment areas.</p>
+        </article>
+      </div>
+
+      <p style="margin-top:1rem"><a href="projects.html" class="btn">View all projects</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo/logo.png" alt="logo" width="140">
+        <p class="muted">Manufacturing: G-153-54, Bagru Industrial Area (Ext), Jaipur, Rajasthan</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="quality.html">Quality</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:+919351428939">9351428939</a></p>
+        <p>Email: <a href="mailto:rgpolymers.jpr@gmail.com">rgpolymers.jpr@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="site-credit">
+      <div class="container"><small>© <span id="year-footer"></span> Wonder+ Pipes & Fittings — All rights reserved.</small></div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // footer year
+    document.getElementById('year-footer').textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    (function(){
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.getElementById('main-nav');
+      navToggle && navToggle.addEventListener('click', ()=> {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+        navToggle.setAttribute('aria-expanded', !expanded);
+        mainNav.classList.toggle('nav--open');
+      });
+    })();
+  </script>
+</body>
+</html>

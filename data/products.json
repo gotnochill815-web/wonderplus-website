@@ -1,0 +1,52 @@
+[
+  {
+    "id": "upvc-01",
+    "category": "upvc",
+    "title": "uPVC Pipes (SWR / Rigid)",
+    "short": "Pressure-rated pipes for water supply and plumbing. Sizes DN40–DN250. ISI 4985 compliant.",
+    "image": "assets/images/products/ChatGPT Image Nov 1, 2025, 03_48_43 PM.png",
+    "specs": {
+      "sizes": "DN40 - DN250",
+      "pressure": "2.5 - 10 kg/cm²",
+      "standard": "ISI 4985",
+      "material": "uPVC"
+    }
+  },
+  {
+    "id": "sn8-01",
+    "category": "sn8",
+    "title": "SN8 Sewer Pipes",
+    "short": "High-stiffness sewer pipes (SN8) for drainage & sewerage projects. Plain & socket types.",
+    "image": "assets/images/products/ChatGPT Image Nov 1, 2025, 03_50_26 PM.png",
+    "specs": {
+      "sizes": "DN110 - DN200",
+      "stiffness": "SN8 (SDR34)",
+      "standard": "IS 15328:2003",
+      "material": "uPVC"
+    }
+  },
+  {
+    "id": "per-01",
+    "category": "perforated",
+    "title": "Perforated Drainage Pipes",
+    "short": "Perforated pipes for filtration and drainage applications. Sizes from 63mm–250mm.",
+    "image": "assets/images/products/ChatGPT Image Nov 1, 2025, 03_52_06 PM.png",
+    "specs": {
+      "sizes": "63mm - 250mm",
+      "use": "Drainage & filtration",
+      "material": "PVC/uPVC"
+    }
+  },
+  {
+    "id": "fit-01",
+    "category": "fittings",
+    "title": "Fittings & Couplers",
+    "short": "Range of couplers, bends, tees, and sockets compatible with uPVC & SWR pipelines.",
+    "image": "assets/images/products/ChatGPT Image Nov 1, 2025, 03_57_59 PM.png",
+    "specs": {
+      "types": "Couplers, Tees, Bends, Sockets",
+      "material": "uPVC",
+      "finish": "Smooth inner surface"
+    }
+  }
+]
