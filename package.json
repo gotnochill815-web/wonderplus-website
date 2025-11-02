@@ -1,18 +1,11 @@
-{
-  "name": "wonderplus-next",
+﻿{
+  "name": "wonderplus-static",
   "version": "1.0.0",
   "private": true,
+  "description": "Wonder+ Pipes — static marketing site",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "npx http-server -p 8080 .",
+    "build": "echo \"static\""
   },
-  "dependencies": {
-    "@sendgrid/mail": "^8.1.6",
-    "isomorphic-unfetch": "^3.1.0",
-    "next": "14.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+  "dependencies": {}
 }
