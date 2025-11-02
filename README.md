@@ -1,40 +1,35 @@
 # 🌐 Wonder+ Pipes Website
 
-A modern, responsive business website built for **Wonder+ Pipes**, a leading manufacturer of uPVC, SN8, Perforated Pipes, and Fittings.  
-This website showcases the company’s products, quality certifications, projects, and contact information in a clean and professional layout.
+A modern, responsive business website built for **Wonder+ Pipes**, a trusted manufacturer of **uPVC, SN8, and Perforated Pipes**.  
+This site showcases the company’s products, projects, and certifications through a sleek, professional design.
 
 ---
 
 ## 🏗️ Project Overview
 
-**Wonder+ Pipes** specializes in:
-- uPVC Pipes (SWR / Rigid)
-- SN8 Sewer Pipes
-- Perforated Drainage Pipes
-- Fittings & Couplers
-
-This website was designed to highlight the brand’s reliability, technical standards, and large-scale infrastructure projects with a premium industrial aesthetic.
+**Wonder+ Pipes** manufactures high-quality piping solutions for plumbing, sewerage, and irrigation systems.  
+The website reflects the brand’s **commitment to quality, engineering precision, and reliability**.
 
 ---
 
 ## 🚀 Features
 
-✅ **Responsive Design** — Fully optimized for desktop, tablet, and mobile.  
-✅ **Interactive UI** — Smooth animations and hover effects for a polished feel.  
-✅ **Project Portfolio** — Showcases key government and private sector projects.  
-✅ **Quality & Certifications** — Displays ISO, BIS, and CIPET certifications with images.  
-✅ **Contact Page** — Integrated contact form and embedded location map.  
-✅ **Fast & Lightweight** — Uses optimized assets and clean HTML/CSS/JS.
+✅ **Responsive Design** — Works perfectly on all screen sizes.  
+✅ **Interactive Animations** — Smooth transitions and AOS effects.  
+✅ **Projects Portfolio** — Displays industrial and infrastructure projects.  
+✅ **Quality Section** — ISO, BIS, and CIPET certificates included.  
+✅ **Contact Page** — Integrated form and live location via Leaflet Map.  
+✅ **Optimized Assets** — Lightweight structure with clean HTML, CSS & JS.
 
 ---
 
-## 🧩 Tech Stack
+## 🧰 Tech Stack
 
 | Category | Tools Used |
-|-----------|-------------|
+|-----------|------------|
 | **Frontend** | HTML5, CSS3, JavaScript (Vanilla) |
-| **Styling Frameworks** | Bootstrap 5 (lightweight usage), Flexbox |
-| **Animations** | AOS (Animate on Scroll) Library |
+| **Styling Frameworks** | Bootstrap 5 (lightweight), Flexbox |
+| **Animations** | AOS (Animate On Scroll) Library |
 | **Map Integration** | Leaflet.js (OpenStreetMap API) |
 | **Deployment** | GitHub Pages / Netlify |
 
@@ -42,25 +37,5 @@ This website was designed to highlight the brand’s reliability, technical stan
 
 ## 🗂️ Folder Structure
 
-wonderplus-website/
-├── assets/
-│ ├── css/ # Stylesheets
-│ ├── images/ # Logos, product photos, certificates, etc.
-│ ├── videos/ # (optional) Background or factory clips
-│ ├── fonts/ # Custom font files
-│
-├── components/ # Reusable HTML/JS components
-├── data/ # JSON data for products, projects, etc.
-├── js/ # JavaScript files for interactivity
-├── pages/ # HTML/JS pages
-│
-├── index.html # Homepage
-├── about.html # Company overview
-├── products.html # Product listings
-├── projects.html # Major projects gallery
-├── quality.html # Certifications & quality policy
-├── contact.html # Contact form + map
-│
-└── README.md # Project documentation
 
 
