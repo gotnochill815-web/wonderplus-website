@@ -42,4 +42,25 @@ This website was designed to highlight the brand’s reliability, technical stan
 
 ## 🗂️ Folder Structure
 
+wonderplus-website/
+├── assets/
+│ ├── css/ # Stylesheets
+│ ├── images/ # Logos, product photos, certificates, etc.
+│ ├── videos/ # (optional) Background or factory clips
+│ ├── fonts/ # Custom font files
+│
+├── components/ # Reusable HTML/JS components
+├── data/ # JSON data for products, projects, etc.
+├── js/ # JavaScript files for interactivity
+├── pages/ # HTML/JS pages
+│
+├── index.html # Homepage
+├── about.html # Company overview
+├── products.html # Product listings
+├── projects.html # Major projects gallery
+├── quality.html # Certifications & quality policy
+├── contact.html # Contact form + map
+│
+└── README.md # Project documentation
+
 
