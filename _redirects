@@ -1,0 +1,6 @@
+﻿# Friendly routes -> static html pages
+/products     /products.html    200
+/projects     /projects.html    200
+/quality      /quality.html     200
+/contact      /contact.html     200
+/*            /index.html       200
